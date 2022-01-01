@@ -1,24 +1,26 @@
 % !Mode:: "TeX:UTF-8"
 
-% This is a note of pronunciations of almost all mathematicians and physicists
-% that I have heard in the university. I say "almost" because only those who
-% can be found on Wikipedia are included. Since ctex and IPA packages cannot
-% work together (even in 2021!), thus you can read the Chinese translations
-% in this tex file only, but not in the generated pdf.
+% This is a note of pronunciations of almost all mathematicians and some
+% physicists that I have heard in the university. I say "almost" because only
+% those who can be found on Wikipedia are included. Since ctex and IPA packages
+% are not compatible(even in 2022!), you can only see the Chinese translations
+% (if available) in this tex file, not in the generated pdf. If you have a
+% solution to this problem, please create an issue in the repository on github
+% at
+% https://github.com/Darron-Wu/Pronunciations-of-Some-Mathematicians/blob/88aa41b7108482b61adea978e0c0f0a2a93a42df/pronunciations_of_some_mathematicians.tex
 %
 % Warning: The “Language” column lists the language in which the name is most
-% likely to be pronounced. It is for reference only and should not be
-% confused with "nationality". If you have a solution to this problem, please
-% create an issue in the repository on github at
-% https://github.com/Darron-Wu/Pronunciations-of-Some-Mathematicians/blob/88aa41b7108482b61adea978e0c0f0a2a93a42df/pronunciations_of_some_mathematicians.tex
+% likely to be pronounced (and the language from which the Chinese translations
+% should be given). It is for reference only and should not be confused with
+% "nationality".
 
 \documentclass[a4paper, titlepage]{article}
 
-\usepackage[hmargin=1.25in,vmargin=1in]{geometry} %default setting in "Word"
-\usepackage{tipa}                      % 国际音标
-\usepackage{longtable}                 % 跨页表格
-\usepackage{hyperref}                  % 超链接，由于此包与其他包容易冲突，要将此包放在最后
-\hypersetup{colorlinks=true, urlcolor=blue} % 设置超链接颜色
+\usepackage[hmargin=1.25in,vmargin=1in]{geometry} % default setting in "Word"
+\usepackage{tipa}                                 % 国际音标
+\usepackage{longtable}                            % 跨页表格
+\usepackage{hyperref}                             % 超链接，由于此包与其他包容易冲突，要将此包放在最后
+\hypersetup{colorlinks=true, urlcolor=blue}       % 设置超链接颜色
 
 \let\ipa\textipa
 \newcommand{\ACUa}{\mathrm{\acute{a}}} % e上加一提
@@ -32,20 +34,23 @@
 \newcommand{\GERo}{\mathrm{\ddot{o}}}  % o上加两点，德语符号
 \newcommand{\HATo}{\mathrm{\hat{o}}}   % o上加hat
 
+% OR = Operation Research
+% NA = Numerical Analysis
+
 \begin{document}
 \title{Pronunciations of Some Mathematicians}
 \author{Darron Wu}
 \maketitle
 
-The .tex file of this document (including the names in Chinese) can be downloaded free from \href{https://github.com/Darron-Wu/Pronunciations-of-Some-Mathematicians/blob/88aa41b7108482b61adea978e0c0f0a2a93a42df/pronunciations_of_some_mathematicians.tex}{here}.
-If you have any suggestions, please create an issue in the repository.
+The latest .tex file of this document (including some Chinese translations) can be downloaded free from \href{https://github.com/Darron-Wu/Pronunciations-of-Some-Mathematicians/blob/88aa41b7108482b61adea978e0c0f0a2a93a42df/pronunciations_of_some_mathematicians.tex}{here}.
+If you have any suggestion or question, please create an issue in the repository.
 
 \renewcommand\arraystretch{1.5}
 \begin{longtable}{|p{.4\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
 \hline
 \large\bfseries Name                   & \large\bfseries Approx in ENG     & \large\bfseries Language and IPA            \\[1.5pt] \hline
 Niels Henrik Abel阿贝尔                & \ipa{["A:b@l]}                    & Norwegian \ipa{["A:b\s{l}]}                 \\ \hline
-Armijo(Armijo condition in OR)         & \ipa{[A:r"mi:joU]}                & American推测                                \\ \hline
+Armijo(in OR)                          & \ipa{[A:r"mi:joU]}                & American推测                                \\ \hline
 Vladimir I. Arnol'd阿诺德              & \ipa{["A:rnoUd]}                  & Russian                                     \\ \hline
 Michael Artin阿丁                      & \ipa{["A:Kti:n]}                  & German \ipa{["aKti:n]}                      \\ \hline
 Michael Atiyah阿蒂亚                   & \ipa{[@"ti:@]}                    & British                                     \\ \hline
@@ -56,7 +61,7 @@ V$\ACUa$clav E. Bene\ipa{\v{s}}        & \ipa{["beneS]}                    & Cze
 Merrie Bergmann                        & \ipa{["beK""mAn]}                 & ``The Logic Book''                          \\ \hline
 Paul Isaac Bernays贝尔奈斯             & \ipa{[beA"naIs\*;b@r"neIz]}       & Swiss \ipa{[bE\^*5"naIs]}                   \\ \hline
 Bernoulli伯努利                        & \ipa{[beK"nUli:]}                 & German \ipa{[bEK"nUli]}                     \\ \hline
-Sergei Natanovich Bernstein伯恩斯坦    & \ipa{["benStaIn]}只找到了德语发音 & Russian                                     \\ \hline
+Sergei Bernstein伯恩斯坦               & \ipa{["bernStaIn]}                & Russian参考德语发音                         \\ \hline
 Joseph Bertrand伯特兰                  & \ipa{["beKtKO:N]}                 & French \ipa{[bEKtK\~A]}                     \\ \hline
 Friedrich Bessel贝塞尔                 & \ipa{["besl(@)]}                  & German \ipa{["bEs\s{l}]}                    \\ \hline
 Jacques Philippe Marie Binet比内       & \ipa{["bi:ne]}                    & French \ipa{[binE]}                         \\ \hline
@@ -100,7 +105,7 @@ Ulisse Dini迪尼                        & \ipa{["di:ni:]}                   & I
 Diophantus丢番图                       & \ipa{[daI@"f\ae{}nt@s]}           & Ancient Greek                               \\ \hline
 Paul Dirac狄拉克                       & \ipa{[dI"r\ae{}k]}                & English                                     \\ \hline
 Peter Gustav Lejeune Dirichlet狄利克雷 & \ipa{[di:ri:"kleI]}               & German \ipa{[di\;Ri"kle:]}                  \\ \hline
-Doolittle(Doolittle decomposition in NA)& \ipa{["dU:lItl]}                 & American推测                                \\ \hline
+Doolittle(in NA)                       & \ipa{["dU:lItl]}                  & American推测                                \\ \hline
 Charles Dupin杜邦                      & \ipa{["dZUpA:n]}                  & French                                      \\ \hline
 Dmitri Egorov叶戈罗夫                  & \ipa{["jegO:rO:f]}rolled r        & Russian Er$\ACUo$po\ipa{\;B}拼读            \\ \hline
 Albert Einstein爱因斯坦                & \ipa{["PaInStaIn\*;"aInstaIn]}    & German \ipa{["PaInStaIn]}                   \\ \hline
@@ -124,12 +129,13 @@ Ferdinand Georg Frobenius弗罗贝尼乌斯  & \ipa{[fKO:"bi:njUs]}             
 Guido Fubini富比尼                     & \ipa{[f@"bi:ni:]}                 & Italian                                     \\ \hline
 Carl Friedrich Gauss高斯               & \ipa{[gaUs]}                      & German \ipa{["gaUs]}                        \\ \hline
 $\GRAE$variste Galois伽罗瓦            & \ipa{[g\ae{}"lwA:]}               & French \ipa{[galwa]}                        \\ \hline
+Semyon Aranovich Gershgorin            & \ipa{[gjIrS"gO:rIn]}rolled r      & Russian拼读                                 \\ \hline
 Leonard Gillman吉尔曼                  & \ipa{["gIlm@n]}                   & American                                    \\ \hline
 Wallace Givens吉文斯                   & \ipa{["gIvns]}                    & American                                    \\ \hline
 Valery Glivenko格列文科                & \ipa{["gli:vi:""enk@]}            & Russian                                     \\ \hline
 Kurt G$\GERo$del哥德尔                 & \ipa{["g3:rd@l]}                  & German \ipa{["g\o:d\s{l}]}                  \\ \hline
 Christian Goldbach哥德巴赫             & \ipa{["g6ltbA:h]}                 & German \ipa{["gOltbax]}                     \\ \hline
-Goldstein(Goldstein condition in OR)   & \ipa{["goUldstaIn]}               & American推测                                \\ \hline
+Goldstein(in OR)                       & \ipa{["goUldstaIn]}               & American推测                                \\ \hline
 Georg Hamel哈默尔                      & \ipa{["hA:m@l]}                   & German                                      \\ \hline
 Ralph E. Gomory高莫里                  & \ipa{["gaUm@ri]}                  & American                                    \\ \hline
 $\ACUE$douard Goursat古尔萨            & \ipa{["gu:KsA:]}                  & French                                      \\ \hline
@@ -147,10 +153,11 @@ Eduard Heine海涅                       & \ipa{["haIni]}                    & G
 Werner Heisenberg海森伯格              & \ipa{["haIzn""beAk]}              & German\ipa{["haIz\textsyllabic{n}""bE\^*5k]}\\ \hline
 Eduard Helly黑利                       & \ipa{[heli]}推测                  & German                                      \\ \hline
 Charles Hermite厄尔米特                & \ipa{[eK"mi:t]}                   & French \ipa{[EK"mit]}                       \\ \hline
-Otto Hesse黑塞                         & \ipa{["hesn]}                     & German \ipa{["hEs\s{n}]}                    \\ \hline
+Otto Hesse黑森                         & \ipa{["hesn]}                     & German \ipa{["hEs\s{n}]}                    \\ \hline
 Karl Hessenberg海森堡                  & \ipa{["hesn""beAk]}               & German                                      \\ \hline
 David Hilbert希尔伯特                  & \ipa{["hIlb@rt]}                  & German \ipa{["hIlb5t]}                      \\ \hline
 Alston Scott Householder豪斯霍德       & \ipa{["haUshoUld@r]}              & American                                    \\ \hline
+Christiaan Huygens惠更斯               & \ipa{["haIg@nz]}                  & Dutch写的是英文发音，因为中文也是根据英文翻译的\\ \hline
 Carl Gustav Jacob Jacobi雅克比         & \ipa{[jA"kO:bi(:)\*;dZ@"koUbi]}   & German \ipa{[ja"ko:bi]}                     \\ \hline
 Bjarni J$\ACUo$nsson                   & \ipa{["jO:ns@n]}推测              & Icelandic                                   \\ \hline
 Camille Jordan若尔当                   & \ipa{["Z6rdO:N\*; -dA:N]}         & French \ipa{[ZO\;Rd\~a]}                    \\ \hline
@@ -161,6 +168,7 @@ Andrey Kolmogorov柯尔莫戈洛夫          & \ipa{[k@lm2"gOr@f]}              
 Mark Krein                             & \ipa{["kleIn]}rolled r            & Russian                                     \\ \hline
 Saul Kripke克里普克                    & \ipa{["krIpki]}                   & American                                    \\ \hline
 Leopold Kronecker克罗内克              & \ipa{["kKO:nek@r]}                & German \ipa{["kKo:nEk5]}                    \\ \hline
+Aleksey Krylov克雷洛夫                 & \ipa{["kr(j)Ilof]}rolled r        & Russian                                     \\ \hline
 Kazimierz Kuratowski库拉托夫斯基       & \ipa{[""ku:rA"tOfskji]}           & Polish \ipa{[""kura"tOfsk\super ji]}        \\ \hline
 Martin Wilhelm Kutta库塔               & \ipa{["kUtA]}                     & German \ipa{["kUta]}                        \\ \hline
 Edmond Laguerre拉盖尔                  & \ipa{["l@geK]}                    & French                                      \\ \hline
@@ -173,6 +181,7 @@ Peter Lax莱克斯                        & \ipa{[l\ae{}x]}                   & 
 Adrien-Marie Legendre勒让德            & \ipa{["l@ZA:NdK\*;l@"ZA:nd@r]}    & French \ipa{[l@Z\~adK]}                     \\ \hline
 Gottfried Wilhelm Leibniz莱布尼兹      & \ipa{["laIbnIts]}                 & German \ipa{["laIbnIts]}                    \\ \hline
 Henri Lebesgue勒贝格                   & \ipa{[l@"beg]}                    & French \ipa{[l@bEg]}                        \\ \hline
+Kenneth Levenberg列文伯格              & \ipa{["lev@nb@rg]}                & American                                    \\ \hline
 Eugenio Elia Levi莱维                  & \ipa{["levi]}                     & Italian                                     \\ \hline
 Paul L$\ACUe$vy列维                    & \ipa{["levi]}                     & French                                      \\ \hline
 L'H$\HATo$spital洛必达                 & \ipa{["lO:pi:tA:l(@)]}            & French \ipa{[lopital]}                      \\ \hline
@@ -192,6 +201,7 @@ Gaspare Mainardi迈因纳尔迪             & \ipa{["maI""nA:rUdi]}             
 Thomas Robert Malthus马尔萨斯          & \ipa{["m\ae{}lT@s]}               & English                                     \\ \hline
 %Szolem Mandelbrojt                    & \ipa{["mA:ndelUbKO]}              & Polish-French                               \\ \hline
 Benoit Mandelbrot曼德布洛特            & \ipa{["m\ae{}nd@l""brO:t]}        & American                                    \\ \hline
+Donald Marquardt                       & \ipa{["mA:rkwA:rt]}               & American                                    \\ \hline
 Gerardus Mercator墨卡托                & \ipa{[m3:r"keIt@r]}               & County of Flanders                          \\ \hline
 Franz Mertens梅尔滕斯                  & \ipa{["mert@ns]}                  & Polish                                      \\ \hline
 Arthur Milgram米尔格拉姆               & \ipa{["mIlgr\ae{}m]}              & American                                    \\ \hline
@@ -199,10 +209,11 @@ David Milman                           & \ipa{["mi:l\super jm@n]}拼读推测  &
 Hermann Minkowski闵可夫斯基            & \ipa{[mIN"k6fski]}                & German \ipa{[mIN"kOfski]}                   \\ \hline
 August Ferdinand M$\GERo$bius默比乌斯  & \ipa{["m3:rbjUs]}                 & German \ipa{["m\o:b\textsubarch{i}Us]}      \\ \hline
 Gaspard Monge蒙日                      & \ipa{[mO:NZ]}                     & French                                      \\ \hline
-Monte Carlo蒙特卡洛                    & \ipa{[mA:nti kA:rloU]}            & not a person                                \\ \hline
+W. J. Morrison莫里森(in SMW formula)   & \ipa{["m6rIs@n]}                  & British推测                                 \\ \hline
+Monte Carlo蒙特卡洛                    & \ipa{["mA:nti kA:rloU]}           & not a person                                \\ \hline
 Jean-Jacques Moreau莫罗                & \ipa{["moUKoU]}                   & French                                      \\ \hline
 Giacinto Morera莫雷拉                  & \ipa{["mO:lelA:]}rolled r         & Italian                                     \\ \hline
-James Munkres                          & \ipa{["m2nkri:s]}                 &                                             \\ \hline
+James Munkres                          & \ipa{["m2nkri:s]}                 & American推测                                \\ \hline
 Isaac Newton牛顿                       & \ipa{["nu:t@n]}                   & English                                     \\ \hline
 Hans Christian Oersted奥斯特           & \ipa{["@AsteD]}                   & Danish \ipa{["\OE\^*5steD]}                 \\ \hline
 Henri Pad$\ACUe$帕德                   & \ipa{["p\ae{}deI]}                & French \ipa{[pade]}                         \\ \hline
@@ -235,9 +246,12 @@ Erhard Schmidt施密特                   & \ipa{[SmIt]}                      & 
 Issai Schur舒尔                        & \ipa{[SUr]}                       & Russian/German                              \\ \hline
 Erwin Schr$\GERo$dinger薛定谔          & \ipa{["SKU:r""dIN2]}              & German \ipa{["SK\o:dIN5]}                   \\ \hline
 Hermann Schwarz施瓦茨                  & \ipa{["SvA:Kts]}                  & German \ipa{["SvaKts]}                      \\ \hline
+Jack Sherman谢尔曼(in SMW formula)     & \ipa{["S@rm@n]}                   & American                                    \\ \hline
 Waclaw Sierpi$\ACUn$ski谢尔宾斯基      & \ipa{[SelU"pi:jnskji:]}rolled r   & Polish\ipa{[\textctc Er"pi\~\j sk\super ji]}\\ \hline
 Thomas Simpson辛普森                   & \ipa{["sImpsn]}                   & British                                     \\ \hline
-Sergei Sobolev索伯列夫                 & \ipa{["sO:bO:lIf]}                & Russian 拼读，俄文字母打不来                \\ \hline
+Sergei Sobolev索伯列夫                 & \ipa{["sO:bO:lIf]}                & Russian拼读                                 \\ \hline
+Guido Stampacchia                      &                                   & Italian                                     \\ \hline
+Hugo Steinhaus施坦因豪斯               & \ipa{["StaIn""haUs]}              & Polish                                      \\ \hline
 Ernst Steinitz施泰尼茨                 & \ipa{["StaInIts]}                 & German                                      \\ \hline
 Thomas Joannes Stieltjes斯蒂尔杰斯     & \ipa{["sti:ltS@s]}                & Dutch \ipa{["stilc@s]}                      \\ \hline
 Sir George Stokes斯托克斯              & \ipa{[stoUks]}                    & Anglo-Irish                                 \\ \hline
@@ -249,20 +263,24 @@ Alfred Tarski塔斯基                    & \ipa{["tA:lUskji:]}rolled r       & 
 Brook Taylor泰勒                       & \ipa{["teIl@r]}                   & English                                     \\ \hline
 Nikola Tesla特斯拉                     & \ipa{["teslA:\*;"tesl@]}          & Serbian \ipa{[tesla]}                       \\ \hline
 Alan Turing图灵                        & \ipa{["tjU@rIN]}                  & English                                     \\ \hline
+A. N. Tikhonov/Tychonoff吉洪诺夫       & \ipa{["gi:h@nO:f]}                & Russian                                     \\ \hline
+Pavel Urysohn                          & \ipa{["Ur(j)Is6n]}rolled r        & Russian拼读                                 \\ \hline
 Alexandre-Th$\ACUe$ophile Vandermonde范德蒙& \ipa{["vA:ndeK""mO:Nd]}       & French                                      \\ \hline
 John Venn韦恩                          & \ipa{[ven]}                       & English                                     \\ \hline
 Franciscus Vi$\GRAe$ta韦达             & \ipa{["vI@tA]}推测                & French                                      \\ \hline
 Giuseppe Vitali维塔利                  & \ipa{["vi:tAli]}推测              & Italian                                     \\ \hline
 Vito Volterra沃尔泰拉                  & \ipa{[vol"terrA:]}rolled r        & Italian \ipa{[vol"tErra]}                   \\ \hline
-Von Neumann冯诺依曼                    & \ipa{[v6n "n6jm6n]}               & Hungarian \ipa{["n6jm6n]}                   \\ \hline
+John von Neumann冯诺依曼               & \ipa{[f6n "n6jm6n]}               & Hungarian \ipa{["n6jm6n]}                   \\ \hline
+Philipp Ludwig von Seidel              & \ipa{[f6n "zaId@l]}               & German \ipa{[f6n "zaId@l]}                  \\ \hline
 Karl Weierstrass魏尔斯特拉斯           & \ipa{["vAI@r""StKA:s]}            & German \ipa{["vaI5StKa:s]}                  \\ \hline
 Hermann Weyl外尔                       & \ipa{[vaIl]}                      & German \ipa{[vaIl]}                         \\ \hline
 Julius Weingarten外恩加滕              & \ipa{["vaIN""gA:t@n]}             & German                                      \\ \hline
 Philip Wolfe沃尔夫                     & \ipa{["wUlf]}                     & American                                    \\ \hline
 Stephen Wolfram沃尔弗拉姆              & \ipa{["wUlfr@m]}                  & American                                    \\ \hline
+Max A. Woodbury伍德伯里(in SMW formula)& \ipa{["wUd""beri]}                & American推测                                \\ \hline
 Ernst Zermelo策梅洛                    & \ipa{[tseA"meIl6\*;z3:r"meloU]}   & German \ipa{[tsE\^*5"me:lo]}                \\ \hline
 Max August Zorn佐恩                    & \ipa{["tsO:Kn]}                   & German \ipa{[tsOKn]}                        \\ \hline
-Zoutendijk(Zoutendijk condition in OR) & \ipa{["SaUt@n""daIk]}             & Dutch推测                                   \\ \hline
+Zoutendijk(in OR)                      & \ipa{["SaUt@n""daIk]}             & Dutch推测                                   \\ \hline
 
 \end{longtable}
 
